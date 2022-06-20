@@ -2,11 +2,12 @@
 
 ## Set up
 
-1. Create MySQL database (CloudFormation)
-2. Create `.env` file and add credentials and parameters for Search query (see `.env_example` for format)
-3. Run script that creates database tables: `database/create_table.py`
-4. Run script that connects to the Twitter API and stores Tweet data: `main.py`
-5. Configure BI dashboard (manual)
+1. Add AWS credentials to ~.aws/credentials (access key and secret access key) and ~.aws/config (region)
+2. Create MySQL database (CloudFormation)
+3. Create `.env` file and add credentials and parameters for Search query (see `.env_example` for format)
+4. Run script that creates database tables: `database/create_table.py`
+5. Run script that connects to the Twitter API and stores Tweet data: `main.py`
+6. Configure BI dashboard (manual)
 
 ## Note
 
