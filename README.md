@@ -9,6 +9,17 @@
 5. Run script that connects to the Twitter API and stores Tweet data: `main.py`
 6. Configure BI dashboard (manual)
 
+## File description
+
+* `.env` is where the following information is expected: 
+  * the credentials required to connect to the Twitter API (bearer token)
+  * the credentials required to connect to the AWS RDS MySQL database
+  * the parameters required to fetch data of interest from the Recent Search endpoint
+* `database/create_table.py` creates initial DB tables to store Tweets and users data. This script must run once, after the creation of the MySQL DB and before the ETL process begins (`main.py`)
+* `authentication.py` contains a class that handles authentication for the Twitter API
+* `fetch_tweets.py` contains a class that connects to the Twitter API Recent Search endpoint and fetches data
+* `main.py` is the main script that performs ETL steps: gets data from the Recent Search endpoint, parses the results, and sends them to the appropriate DB tables
+
 ## Note
 
 This toolkit in intended as an example framework that quickly fetches, parses, and analyzes Twitter data. 
